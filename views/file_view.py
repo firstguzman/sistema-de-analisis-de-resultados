@@ -1,7 +1,8 @@
 import sys
 import time
 from os import system
-from exceptions.custom_file_exception import CustomFileException
+from exceptions.file_extension_exception import FileExtensionException
+from exceptions.file_format_incorrect import FileFormarIncorrect
 from repositories.read_file import read_file
 
 # La siguiente vista contiene las opciones para trabajar con los archivos.
@@ -27,11 +28,16 @@ def file_view(participants):
                 print('\n\tPresione enter para continuar')
                 skip = input()
                 return participants
-            except CustomFileException as e:
+            except FileExtensionException as e:
                 print('\n\t\tError: ', e)
-                print('\t\tPorfavor intente nuevamente.')
+                print('\t\tPorfavor intente nuevamente. Recuede que la extensión del archivo debe ser .txt ')
                 print('\n\tPresione enter para continuar')
                 skip = input()
+            except FileFormarIncorrect as e:
+                print('\n\t\tError: ', e)
+                print('\t\tPorfavor intente nuevamente. Verifique que el archivo cargada contenga las columnas necesarias')
+                print('\n\tPresione enter para continuar')
+                skip = input()            
         elif ans == '2':
             break
 
