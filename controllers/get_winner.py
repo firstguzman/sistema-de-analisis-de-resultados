@@ -27,5 +27,3 @@ def get_winner(participants):
         i += 1
         print("| {:^35} | {:^5} | {:^5}|".format(value[0], value[1], str(value[2])))
         print("-"*57) 
-
-    # print(tabulate(values, headers=['Nombre', 'Edad', 'Tiempo'], tablefmt='pretty'))

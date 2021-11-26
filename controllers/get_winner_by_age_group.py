@@ -62,5 +62,3 @@ def get_winner_by_age_group(participants):
         i += 1
         print("| {:<15} | {:<35} | {:<5} | {:<5}|".format(value[0], value[1], value[2], str(value[3])))
         print("-"*75) 
-
-    # print(tabulate(values, headers=['Grupo Etario', 'Nombre', 'Edad', 'Tiempo'], tablefmt='pretty'))

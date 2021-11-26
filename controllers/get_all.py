@@ -7,4 +7,3 @@ def get_all(participants):
         i += 1
         print("| {:<5} | {:<10} | {:<35} | {:<5} | {:<5} | {:<5}|".format(i, participant.ci, participant.name(),participant.gender,participant.age,str(participant.time)))
         print("-"*86) 
-    # print(tabulate(participants, headers=['Nº', 'Cedula', 'Nombre', 'Sexo', 'Edad', 'Tiempo'], tablefmt='pretty', showindex='always'))

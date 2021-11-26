@@ -4,6 +4,7 @@ from views.file_view import file_view
 from views.options_view import options_view
 
 def main_view():
+    participants = []
     while True:
         print("""
         1. Archivo
@@ -14,11 +15,11 @@ def main_view():
         ans = input('Seleccione una opción: ')
         if ans == '1':
             system('cls')
-            file_view()
+            participants = file_view(participants)
 
         elif ans == '2':
             system('cls')
-            options_view()
+            options_view(participants)
 
         else:
             system('cls')

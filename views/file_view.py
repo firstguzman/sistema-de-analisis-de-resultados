@@ -1,12 +1,12 @@
 import sys
 import time
 from os import system
+from repositories.read_file import read_file
 
-def file_view():
+def file_view(participants):
     while True:
         print("""
         1. Cargar Archivo
-        2. Volver
 
         0. Cerrar Sesión
         """)
@@ -14,11 +14,12 @@ def file_view():
         ans = input('Seleccione una opción: ')
         if ans == '1':
             system('cls')
-            'Cargando archivo'
+            participants = read_file(participants)
+            return participants
 
-        elif ans == '2':
-            system('cls')
-            break
+        # elif ans == '2':
+        #     system('cls')
+        #     break
 
         elif ans == '0':
             system('cls')

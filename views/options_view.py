@@ -10,7 +10,7 @@ from controllers.get_winner_by_age_group_and_sex import get_winner_by_age_group_
 from controllers.get_winner import get_winner
 from controllers.get_histograma import get_histograma
 
-def options_view():
+def options_view(participants):
     while True:
         print("""
         1. Lista de participantes
@@ -29,39 +29,39 @@ def options_view():
         ans = input('Seleccione una opción: ')
         if ans == '1':
             system('cls')
-            get_all()
+            get_all(participants)
 
         elif ans == '2':
             system('cls')
-            get_participants_numbers()
+            get_participants_numbers(participants)
 
         elif ans == '3':
             system('cls')
-            get_by_age_group()
+            get_by_age_group(participants)
 
         elif ans == '4':
             system('cls')
-            get_by_gender()
+            get_by_gender(participants)
 
         elif ans == '5':
             system('cls')
-            get_winner_by_age_group()
+            get_winner_by_age_group(participants)
 
         elif ans == '6':
             system('cls')
-            get_winner_by_gender()
+            get_winner_by_gender(participants)
 
         elif ans == '7':
             system('cls')
-            get_winner_by_age_group_and_sex()
+            get_winner_by_age_group_and_sex(participants)
 
         elif ans == '8':
             system('cls')
-            get_winner()
+            get_winner(participants)
 
         elif ans == '9':
             system('cls')
-            get_histograma()
+            get_histograma(participants)
 
         elif ans == '0':
             system('cls')

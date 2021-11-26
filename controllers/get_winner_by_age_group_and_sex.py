@@ -99,7 +99,6 @@ def get_winner_by_age_group_and_sex(participants):
             participant_details = ['Master', winner.gender, winner.name(), winner.age, winner.time]
         values.append(participant_details)
 
-    print(values)
     print("-"*84)
     print("| {:^15} | {:^6} | {:^35} | {:^5} | {:^5}  |".format('Grupo Etario', 'Genero', 'Nombre','Edad','Tiempo'))
     print("-"*84)

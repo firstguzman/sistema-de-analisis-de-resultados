@@ -1,7 +1,6 @@
 from repositories.participant import Participant
 
-def read_file():
-    participants = []
+def read_file(participants):
     with open ("competencia.txt") as f:
         for line in f:
             values = line.split(',')

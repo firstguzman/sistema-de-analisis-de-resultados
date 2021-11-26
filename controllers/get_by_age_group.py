@@ -18,4 +18,3 @@ def get_by_age_group(participants):
         i += 1
         print("| {:<12} | {:<7} |".format(value[0], value[1]))
         print("-"*26) 
-    # print(tabulate(values, headers=['Grupo Etario', 'Cantidad'], tablefmt='pretty'))

@@ -46,5 +46,3 @@ def get_winner_by_gender(participants):
         i += 1
         print("| {:<10} | {:<35} | {:<5} | {:<5}|".format(value[0], value[1], value[2], str(value[3])))
         print("-"*70) 
-
-    # print(tabulate(values, headers=['Genero', 'Nombre', 'Edad', 'Tiempo'], tablefmt='pretty'))
