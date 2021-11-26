@@ -1,9 +1,16 @@
+from exceptions.custom_file_exception import CustomFileException
 from repositories.participant import Participant
 
-def read_file(participants):
-    with open ("competencia.txt") as f:
+def read_file(file_name):
+    if not file_name.endswith('.txt'):
+        raise CustomFileException('Tipo de archivo incorrecto')
+
+    participants = []
+    with open (file_name) as f:
         for line in f:
             values = line.split(',')
+            if not values.__len__() == 10:
+                raise CustomFileException('Cantidad de columnas incorrectas')
             participant = Participant(
                 int(values[0]),
                 values[1],
