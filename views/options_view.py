@@ -12,6 +12,7 @@ from controllers.get_histograma import get_histograma
 
 def options_view(participants):
     while True:
+        system('cls')
         print("""
         1. Lista de participantes
         2. Cantidad de participantes
@@ -30,38 +31,56 @@ def options_view(participants):
         if ans == '1':
             system('cls')
             get_all(participants)
+            print('\n\tPresione enter para continuar')
+            skip = input()
 
         elif ans == '2':
             system('cls')
             get_participants_numbers(participants)
+            print('\n\tPresione enter para continuar')
+            skip = input()
 
         elif ans == '3':
             system('cls')
             get_by_age_group(participants)
+            print('\n\tPresione enter para continuar')
+            skip = input()
 
         elif ans == '4':
             system('cls')
             get_by_gender(participants)
+            print('\n\tPresione enter para continuar')
+            skip = input()
 
         elif ans == '5':
             system('cls')
             get_winner_by_age_group(participants)
+            print('\n\tPresione enter para continuar')
+            skip = input()
 
         elif ans == '6':
             system('cls')
             get_winner_by_gender(participants)
+            print('\n\tPresione enter para continuar')
+            skip = input()
 
         elif ans == '7':
             system('cls')
             get_winner_by_age_group_and_sex(participants)
+            print('\n\tPresione enter para continuar')
+            skip = input()
 
         elif ans == '8':
             system('cls')
             get_winner(participants)
+            print('\n\tPresione enter para continuar')
+            skip = input()
 
         elif ans == '9':
             system('cls')
             get_histograma(participants)
+            print('\n\tPresione enter para continuar')
+            skip = input()
 
         elif ans == '0':
             system('cls')

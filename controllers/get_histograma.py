@@ -10,6 +10,7 @@ def get_histograma(participants):
             masters = masters + icon
         else:
             seniors = seniors + icon 
+    print('HISTOGRAMA\n')
     print('Juniors (x): | ' + juniors)
     print('Masters (y): | ' + masters)
     print('Seniors (z): | ' + seniors)

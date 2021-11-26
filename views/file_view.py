@@ -4,8 +4,12 @@ from os import system
 from exceptions.custom_file_exception import CustomFileException
 from repositories.read_file import read_file
 
+# La siguiente vista contiene las opciones para trabajar con los archivos.
+# A través de esta vista se puede: Cargar el archivo, volver al menú anterior
+# y cerrar el sisteme
 def file_view(participants):
     while True:
+        system('cls')
         print("""
         1. Cargar Archivo
         2. Volver
@@ -13,29 +17,32 @@ def file_view(participants):
         0. Cerrar Sesión
         """)
 
-        ans = input('Seleccione una opción: ')
+        ans = input('\tSeleccione una opción: ')
         if ans == '1':
             system('cls')
             try:
-                file_name = input('Introduce el nombre del archivo: ')
+                file_name = input('\tIntroduce el nombre del archivo: ')
                 participants = read_file(file_name)
+                print('\n\t\tArchivo cargado satifactoriamente')
+                print('\n\tPresione enter para continuar')
+                skip = input()
                 return participants
             except CustomFileException as e:
-                print('Error: ', e)
-                print('Porfavor intente nuevamente.', e)
-
+                print('\n\t\tError: ', e)
+                print('\t\tPorfavor intente nuevamente.')
+                print('\n\tPresione enter para continuar')
+                skip = input()
         elif ans == '2':
-            system('cls')
             break
 
         elif ans == '0':
             system('cls')
-            print('Adios..')
+            print('\t\tCerrando sesión. Nos vemos pronto..')
             time.sleep(1)
             sys.exit()
 
         else:
             system('cls')
-            print("\n Opción no válida, intente de nuevo")
+            print("\n\t\tOpción no válida, intente de nuevo")
             time.sleep(2)
             system('cls')
